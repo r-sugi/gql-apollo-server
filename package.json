@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": "10"
+  },
   "workspaces": {
     "packages": [
       "src/*"
@@ -34,7 +37,7 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "dev": "ts-node-dev ./src/index.ts",
+    "dev": "ts-node-dev --no-notify ./src/index.ts",
     "lint": "eslint --fix --ext .jsx,.js,.tsx,.ts ./src/"
   }
 }
