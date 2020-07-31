@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "engines": {
-    "node": "10"
+    "node": "10",
+    "npm": "6.x"
   },
   "workspaces": {
     "packages": [
@@ -37,7 +38,7 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "dev": "ts-node-dev --no-notify ./src/index.ts",
+    "dev": "NODE_ENV=development ts-node-dev --no-notify ./src/index.ts",
     "lint": "eslint --fix --ext .jsx,.js,.tsx,.ts ./src/"
   }
 }
