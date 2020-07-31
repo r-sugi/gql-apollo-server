@@ -24,12 +24,14 @@ server.applyMiddleware({ app, path: '/graphql' });
 
 const eraseDatabaseOnSync = true;
 
+const port = process.env.PORT || 4000;
+
 sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
   if (eraseDatabaseOnSync) {
     createUsersWithMessages(models);
   }
 
-  app.listen({ port: 4000 }, () => {
+  app.listen({ port }, () => {
     console.log('Apollo Server on http://localhost:4000/graphql');
   });
 });
