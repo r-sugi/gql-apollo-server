@@ -108,3 +108,5 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+db/data/
