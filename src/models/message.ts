@@ -19,7 +19,7 @@ Message.init(
       primaryKey: true,
     },
     text: {
-      type: DataTypes.STRING(65500),
+      type: DataTypes.STRING,
       allowNull: true,
     },
   },
