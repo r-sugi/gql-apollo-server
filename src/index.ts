@@ -8,7 +8,7 @@ import models, { sequelize } from './models';
 import { createUsersWithMessages } from './seed';
 
 const app = express();
-
+console.log(process.env)
 app.use(cors());
 
 const server = new ApolloServer({
